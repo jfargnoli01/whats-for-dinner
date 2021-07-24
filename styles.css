@@ -46,6 +46,12 @@ nav {
   padding: 50px;
  }
 
+ .cookpot-recipe-section {
+   display: flex;
+   align-items: center;
+ }
+
+
  .what-are-you-looking-for-text {
   font-weight: 900;
   font-size: x-large;
@@ -68,3 +74,18 @@ label {
   width: 150px;
   align-self: center;
 } 
+
+.you-should-make {
+  font-weight: 1000;
+  font-style: italic;
+  margin-bottom: -30px;
+}
+
+.dish-displays-here {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.hidden {
+  display: none;
+}
