@@ -6,7 +6,7 @@ var cookpotIcon = document.querySelector('.cookpot');
 var youShouldMakeText = document.querySelector('.you-should-make');
 var yourDish = document.querySelector('.dish-displays-here');
 
-letsCookButton.addEventListener('click', selectDish);
+letsCookButton.addEventListener('click', loadingDish);
 
 var sides = [
   "Crispy Potatoes",
@@ -75,3 +75,10 @@ function displayDish(side) {
   yourDish.innerText = `${side}!`
   yourDish.classList.remove('hidden');
 };
+
+function loadingDish() {
+  cookpotIcon.classList.add('load');
+  setTimeout(function() {
+    selectDish();
+  }, 1800);
+}
