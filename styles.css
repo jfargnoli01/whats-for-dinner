@@ -68,3 +68,7 @@ label {
   width: 150px;
   align-self: center;
 } 
+
+.hidden {
+  display: none;
+}
