@@ -80,8 +80,11 @@ label {
 .cookpot {
   width: 150px;
   align-self: center;
-  animation: wobble-hor-bottom 2s;
 } 
+
+.load {
+  animation: wobble-hor-bottom 2s;
+}
 
 .you-should-make {
   font-weight: 1000;
