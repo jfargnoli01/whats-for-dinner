@@ -80,8 +80,11 @@ label {
 .cookpot {
   width: 150px;
   align-self: center;
-  animation: wobble-hor-bottom 2s;
 } 
+
+.load {
+  animation: wobble-hor-bottom 2s;
+}
 
 .you-should-make {
   font-weight: 1000;
@@ -93,6 +96,7 @@ label {
   font-size: 2em;
   font-weight: bolder;
   text-align: center;
+  animation: fade-in 3s;
 }
 
 .hidden {
@@ -163,6 +167,16 @@ label {
   75% {transform:translateX(-6px) rotate(-1.2deg)
   }
 }
+
+@keyframes fade-in {
+  0% {
+    opacity:0
+  }
+  100% {
+    opacity:1
+  }
+}
+
 @media (hover: hover) {
   .lets-cook:hover {
     background-color: #20d7ce;
