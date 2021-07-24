@@ -56,15 +56,15 @@ function getRandomIndex(array) {
 
 function selectDish() {
   if(sideInput.checked) {
-    var side = getRandomIndex(sides)
+    var side = getRandomIndex(sides);
     displayDish(side);
   }
   if(mainDishInput.checked) {
-    var mainDish = getRandomIndex(mainDishes)
+    var mainDish = getRandomIndex(mainDishes);
     displayDish(mainDish);
   }
   if(dessertInput.checked) {
-    var dessert = getRandomIndex(desserts)
+    var dessert = getRandomIndex(desserts);
     displayDish(dessert);
   }
 };
@@ -72,6 +72,6 @@ function selectDish() {
 function displayDish(side) {
   cookpotIcon.classList.add('hidden');
   youShouldMakeText.classList.remove('hidden');
-  yourDish.innerText = `${side}`
+  yourDish.innerText = `${side}!`
   yourDish.classList.remove('hidden');
 };
