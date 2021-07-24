@@ -3,6 +3,8 @@ var sideInput = document.querySelector('.side');
 var mainDishInput = document.querySelector('.main-dish');
 var dessertInput = document.querySelector('.dessert');
 var cookpotIcon = document.querySelector('.cookpot');
+var youShouldMakeText = document.querySelector('.you-should-make');
+var yourDish = document.querySelector('.dish-displays-here');
 
 letsCookButton.addEventListener('click', selectDish);
 
@@ -54,23 +56,22 @@ function getRandomIndex(array) {
 
 function selectDish() {
   if(sideInput.checked) {
-    getRandomIndex(sides)
+    var side = getRandomIndex(sides)
+    displayDish(side);
   }
   if(mainDishInput.checked) {
-    getRandomIndex(mainDishes)
+    var mainDish = getRandomIndex(mainDishes)
+    displayDish(mainDish);
   }
   if(dessertInput.checked) {
-    getRandomIndex(desserts)
+    var dessert = getRandomIndex(desserts)
+    displayDish(dessert);
   }
-  displayDish();
 };
 
-function displayDish() {
-  //hide cookpot icon
+function displayDish(side) {
   cookpotIcon.classList.add('hidden');
-  
+  youShouldMakeText.classList.remove('hidden');
+  yourDish.innerText = `${side}`
+  yourDish.classList.remove('hidden');
 };
-//cookpot icon will disapear
-//string you should make: &
-//item will be displayed in right section
-//new clear button at bottom right "clear" in section
