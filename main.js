@@ -54,7 +54,10 @@ function getRandomIndex(array) {
   return array[randomIndex];
 };
 
+
 function selectDish() {
+  //call check selection to get the specific string
+  //pass this to display dish
   if(sideInput.checked) {
     var side = getRandomIndex(sides);
     displayDish(side);
