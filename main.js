@@ -54,22 +54,24 @@ function getRandomIndex(array) {
   return array[randomIndex];
 };
 
-
-function selectDish() {
-  //call check selection to get the specific string
-  //pass this to display dish
+function checkSelection() {
   if(sideInput.checked) {
     var side = getRandomIndex(sides);
-    displayDish(side);
+    return side;
   }
   if(mainDishInput.checked) {
     var mainDish = getRandomIndex(mainDishes);
-    displayDish(mainDish);
+    return mainDish;
   }
   if(dessertInput.checked) {
     var dessert = getRandomIndex(desserts);
-    displayDish(dessert);
+    return dessert;
   }
+};
+
+function selectDish() {
+  var dish = checkSelection();
+  displayDish(dish);
 };
 
 function displayDish(side) {
@@ -80,8 +82,15 @@ function displayDish(side) {
 };
 
 function loadingDish() {
+  displayPot();
   cookpotIcon.classList.add('load');
   setTimeout(function() {
     selectDish();
   }, 1800);
-}
+};
+
+function displayPot() {
+  cookpotIcon.classList.remove('hidden');
+  youShouldMakeText.classList.add('hidden');
+  yourDish.classList.add('hidden');
+};
